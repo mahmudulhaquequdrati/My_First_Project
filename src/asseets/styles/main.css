@@ -12,7 +12,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  margin: 20px 40px;
+  margin: 20px 60px;
+}
+.pagination {
+  text-align: center;
 }
 .featured-container {
   margin: 20px 40px;
@@ -30,9 +33,29 @@
   max-width: 800px;
   margin: 0 auto;
 }
-@media screen and (max-width: 580px) {
+
+@media screen and (min-width: 768px) {
+  .popular {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 920px) {
   .featured-sneakers {
-    grid-template-columns: repeat(1, 1fr);
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product-details-main {
+    margin: 0 20px;
+  }
+  .main-content {
+    padding: 0 20px;
+  }
+  .popular {
+    font-size: 12px;
+  }
+  .FullName {
+    font-size: 14px !important;
   }
 }
 @media screen and (min-width: 580px) and (max-width: 768px) {
@@ -41,8 +64,8 @@
     margin: 20px;
   }
 }
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 580px) {
   .featured-sneakers {
-    margin: 20px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
