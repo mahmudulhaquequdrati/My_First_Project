@@ -33,6 +33,9 @@
   max-width: 800px;
   margin: 0 auto;
 }
+.fetatred-img {
+  width: 50%;
+}
 
 @media screen and (min-width: 768px) {
   .popular {
@@ -56,6 +59,12 @@
   }
   .FullName {
     font-size: 14px !important;
+  }
+  .featured-item {
+    flex-direction: column;
+  }
+  .fetatred-img {
+    width: 100%;
   }
 }
 @media screen and (min-width: 580px) and (max-width: 768px) {

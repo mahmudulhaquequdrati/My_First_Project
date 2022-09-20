@@ -14,7 +14,9 @@ export default function Products() {
   const pageSize = 9;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products?limit=${pageSize}&page=${page}`)
+    fetch(
+      `https://sneaker-seekers.herokuapp.com/api/products?limit=${pageSize}&page=${page}`
+    )
       .then((res) => res.json())
       .then((json) => {
         setProducts(json?.allProducts);

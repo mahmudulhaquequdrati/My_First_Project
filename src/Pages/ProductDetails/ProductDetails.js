@@ -20,7 +20,7 @@ const ProductDetails = () => {
     setOpen(false);
   };
   useEffect(() => {
-    fetch(`http://localhost:5000/api/products`)
+    fetch(`https://sneaker-seekers.herokuapp.com/api/products`)
       .then((res) => res.json())
       .then((json) => {
         setAllProducts(json?.allProducts);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
     // send comment to database
     axios
       .post(
-        "http://localhost:5000/api/comment",
+        "https://sneaker-seekers.herokuapp.com/api/comment",
         {
           comment,
           productId,
@@ -55,7 +55,7 @@ const ProductDetails = () => {
         setComment("");
         axios
           .get(
-            `http://localhost:5000/api/comment/single?productId=${productId}`
+            `https://sneaker-seekers.herokuapp.com/api/comment/single?productId=${productId}`
           )
           .then((res) => {
             setComments(res.data?.data);
@@ -66,7 +66,9 @@ const ProductDetails = () => {
   useEffect(() => {
     // get all the comments from database for specific product
     axios
-      .get(`http://localhost:5000/api/comment/single?productId=${productId}`)
+      .get(
+        `https://sneaker-seekers.herokuapp.com/api/comment/single?productId=${productId}`
+      )
       .then((res) => {
         setComments(res.data?.data);
       });

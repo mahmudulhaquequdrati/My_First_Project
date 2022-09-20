@@ -59,8 +59,9 @@ const Home = () => {
         <p>Contact us</p>
         <div className="featured-item">
           <img
+            className="fetatred-img"
             style={{
-              width: "50%",
+              // width: "50%",
               height: "450px",
               borderRadius: "10px",
             }}
