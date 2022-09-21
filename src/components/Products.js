@@ -15,7 +15,7 @@ export default function Products() {
 
   useEffect(() => {
     fetch(
-      `https://sneaker-seekers.herokuapp.com/api/products?limit=${pageSize}&page=${page}`
+      `https://mern-sneaker-project.herokuapp.com/api/products?limit=${pageSize}&page=${page}`
     )
       .then((res) => res.json())
       .then((json) => {

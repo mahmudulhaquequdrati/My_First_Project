@@ -51,7 +51,7 @@ export default function SignUp() {
       axios.post("https://api.imgbb.com/1/upload", formData).then((res) => {
         const imgURL = res.data.data.url;
         axios
-          .post("https://sneaker-seekers.herokuapp.com/api/users", {
+          .post("https://mern-sneaker-project.herokuapp.com/api/users", {
             fullname:
               event.target.firstName.value + " " + event.target.lastName.value,
             email: event.target.email.value,
@@ -65,7 +65,7 @@ export default function SignUp() {
       });
     } else {
       axios
-        .post("https://sneaker-seekers.herokuapp.com/api/users", {
+        .post("https://mern-sneaker-project.herokuapp.com/api/users", {
           fullname:
             event.target.firstName.value + " " + event.target.lastName.value,
           email: event.target.email.value,

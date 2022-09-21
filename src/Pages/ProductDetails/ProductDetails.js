@@ -20,7 +20,7 @@ const ProductDetails = () => {
     setOpen(false);
   };
   useEffect(() => {
-    fetch(`https://sneaker-seekers.herokuapp.com/api/products`)
+    fetch(`https://mern-sneaker-project.herokuapp.com/api/products`)
       .then((res) => res.json())
       .then((json) => {
         setAllProducts(json?.allProducts);
@@ -36,7 +36,7 @@ const ProductDetails = () => {
     // send comment to database
     axios
       .post(
-        "https://sneaker-seekers.herokuapp.com/api/comment",
+        "https://mern-sneaker-project.herokuapp.com/api/comment",
         {
           comment,
           productId,
@@ -55,7 +55,7 @@ const ProductDetails = () => {
         setComment("");
         axios
           .get(
-            `https://sneaker-seekers.herokuapp.com/api/comment/single?productId=${productId}`
+            `https://mern-sneaker-project.herokuapp.com/api/comment/single?productId=${productId}`
           )
           .then((res) => {
             setComments(res.data?.data);
@@ -67,7 +67,7 @@ const ProductDetails = () => {
     // get all the comments from database for specific product
     axios
       .get(
-        `https://sneaker-seekers.herokuapp.com/api/comment/single?productId=${productId}`
+        `https://mern-sneaker-project.herokuapp.com/api/comment/single?productId=${productId}`
       )
       .then((res) => {
         setComments(res.data?.data);

@@ -27,7 +27,7 @@ const AddProduct = () => {
         axios.post("https://api.imgbb.com/1/upload", formData).then((res) => {
           const imgURL = res.data.data.url;
           axios
-            .post("https://sneaker-seekers.herokuapp.com/api/products", {
+            .post("https://mern-sneaker-project.herokuapp.com/api/products", {
               shoeName: name,
               retailPrice: price,
               thumbnail: imgURL,
@@ -38,7 +38,7 @@ const AddProduct = () => {
             .then((res) => {
               alert("Add product successfully");
               axios
-                .get("https://sneaker-seekers.herokuapp.com/api/products")
+                .get("https://mern-sneaker-project.herokuapp.com/api/products")
                 .then((res) => {
                   event.target.reset();
                   res.status === 200 && navigate("/");

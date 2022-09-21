@@ -49,7 +49,7 @@ export default function SignIn() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     axios
-      .post("https://sneaker-seekers.herokuapp.com/api/users/signin", {
+      .post("https://mern-sneaker-project.herokuapp.com/api/users/signin", {
         email: data.get("email"),
         password: data.get("password"),
       })
