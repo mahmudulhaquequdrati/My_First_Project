@@ -109,8 +109,20 @@ const ProductDetails = () => {
             </span>{" "}
           </p>
           <p>Brand : {product?.brand}</p>
-          {product?.description && <p>Descriptions :{product?.description}</p>}
-          {(product?.description === "" || undefined || null || "\n") && (
+          {product?.description ? (
+            <p>Descriptions : {product?.description}</p>
+          ) : (
+            <p>
+              Descriptions: A monochromatic Onyx hue envelops the latest Yeezy
+              Boost 350 V2, the lifestyle runner from adidas and Kanye West. The
+              upper features a dark black Primeknit weave along with rope laces,
+              while a post-dyed monofilament side stripe can be found in a
+              lighter black shade. A full-length Boost unit is encapsulated in a
+              semi-translucent ribbed TPU midsole, while a black rubber outsole
+              rounds out the look.
+            </p>
+          )}
+          {/* {(product?.description === "" || undefined || null || "\n") && (
             <p>
               Descriptions : A monochromatic Onyx hue envelops the latest Yeezy
               Boost 350 V2, the lifestyle runner from adidas and Kanye West. The
@@ -120,7 +132,7 @@ const ProductDetails = () => {
               semi-translucent ribbed TPU midsole, while a black rubber outsole
               rounds out the look.
             </p>
-          )}
+          )} */}
           <div
             style={{
               marginTop: "20px",
